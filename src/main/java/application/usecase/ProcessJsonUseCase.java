@@ -21,6 +21,7 @@ public class ProcessJsonUseCase {
     public Mono<Void> processAndStoreFromUrls() {
         // URLs de los JSON
         String url1 = "https://jsonplaceholder.typicode.com/todos/2";
+        
         String url2 = "https://jsonplaceholder.typicode.com/todos/1";
 
         Mono<JsonMessage> json1 = webClient.get().uri(url1).retrieve()
